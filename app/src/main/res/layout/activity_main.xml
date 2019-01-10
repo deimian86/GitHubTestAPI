@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        tools:context="com.damgonzalez.githubapitest.ui.MainActivity">
+        tools:context="com.damgonzalez.githubapitest.ui.activities.MainActivity">
 
     <RelativeLayout
             android:layout_width="match_parent"
@@ -29,12 +29,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="REPO_WATCHERS" />
-
-            <Button
-                    android:id="@+id/btnConsulta3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="WATCHER DETAIL" />
 
             <TextView
                     android:id="@+id/txtResponse"

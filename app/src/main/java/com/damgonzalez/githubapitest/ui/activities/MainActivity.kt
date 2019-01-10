@@ -1,4 +1,4 @@
-package com.damgonzalez.githubapitest.ui
+package com.damgonzalez.githubapitest.ui.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -51,26 +51,6 @@ class MainActivity : AppCompatActivity() {
         btnConsulta2.setOnClickListener {
             val intent = ListActivity.newIntent(this)
             startActivity(intent)
-        }
-
-        // WATCHER DETAIL
-
-        btnConsulta3.setOnClickListener {
-            progressBar.visibility = View.VISIBLE
-            val queryBody = Query()
-            queryBody.query = Constants.QUERY_USER_DETAIL
-            gitApi = GitHubApi.create()
-            disposable = gitApi.getWatcherDetail(queryBody)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ result ->
-                    progressBar.visibility = View.INVISIBLE
-                    Log.info(result.data?.user.toString())
-                    txtResponse.text = result.data?.user.toString()
-                }, { e ->
-                    progressBar.visibility = View.INVISIBLE
-                    e.printStackTrace()
-                })
         }
 
     }

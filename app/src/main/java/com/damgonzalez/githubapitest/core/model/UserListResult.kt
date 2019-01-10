@@ -31,7 +31,14 @@ class Edges {
 
     @SerializedName("edges")
     @Expose
-    var users: ArrayList<User>? = null
+    var users: ArrayList<Node>? = null
 
 }
 
+class Node {
+
+    @SerializedName("node")
+    @Expose
+    var user: User ? = null
+
+}

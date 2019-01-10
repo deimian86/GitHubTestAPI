@@ -14,7 +14,7 @@ class UserResult {
 
 class UserData {
 
-    @SerializedName(value="repositoryOwner", alternate= ["node"])
+    @SerializedName(value="repositoryOwner")
     @Expose
     var user: User? = null
 

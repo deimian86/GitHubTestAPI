@@ -1,36 +1,19 @@
 package com.damgonzalez.githubapitest.ui.adapter
 
-import android.content.Context
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import com.damgonzalez.githubapitest.core.model.User
 import com.damgonzalez.githubapitest.R
+import com.damgonzalez.githubapitest.core.model.Node
 
-class UserAdapter : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
-
-    var data: ArrayList<User>  = ArrayList()
-    lateinit var context:Context
-
-    fun UserAdapter(data : ArrayList<User>, context: Context){
-        this.data = data
-        this.context = context
-    }
-
-    fun updateData(data: ArrayList<User>?) {
-        Log.d("DEBUG", "data.count = " + data!!.count())
-        this.data.clear()
-        this.data.addAll(data)
-        notifyDataSetChanged()
-    }
+class UserAdapter(var data : ArrayList<Node>, private val itemClickListener: (Int) -> Unit) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = data.get(position)
-        holder.bind(item, context)
+        holder.bind(item.user!!,itemClickListener)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -43,13 +26,13 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
         val userName = view.findViewById(R.id.txtResponse) as TextView
 
-        fun bind(user:User, context: Context){
-            userName.text = user.name
-            itemView.setOnClickListener(View.OnClickListener {
-                Toast.makeText(context, user.id, Toast.LENGTH_SHORT).show()
-            })
+        fun bind(user:User ,itemClickListener:(Int)->Unit) {
+            userName.text = user.id
+            itemView.setOnClickListener { itemClickListener(adapterPosition) }
+
         }
     }
 }
