@@ -14,22 +14,13 @@ class Constants {
         val REPO_OWNER = "emberjs"
 
         @JvmField
-        val USER_TEMP = "deimian86"
-
-        @JvmField
         val QUERY_REPO_INFO = "query { repository(owner:\"$REPO_OWNER\", name:\"$REPO_NAME\") {" +
                 "name description forkCount url }}"
 
         @JvmField
         val QUERY_REPO_LIST_WATCHERS = "query { repository(owner:\"$REPO_OWNER\", name:\"$REPO_NAME\") {" +
-                "id name watchers(first: 30) { edges { node { id avatarUrl bio email location login name } } } }" +
+                "id name watchers(first: 30) { edges { node { id avatarUrl bio email location login name websiteUrl url } } } }" +
                 " rateLimit { cost } }"
-
-        @JvmField
-        val QUERY_USER_DETAIL = "query { repositoryOwner(login: \"$USER_TEMP\") { " +
-                "login ... on User { id avatarUrl bio email location login name } } }"
-
-
 
     }
 

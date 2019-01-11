@@ -6,16 +6,20 @@ import android.os.Bundle
 import com.damgonzalez.githubapitest.R
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.View
+import com.damgonzalez.githubapitest.core.db.LocalDB
 import com.damgonzalez.githubapitest.core.model.Node
 import com.damgonzalez.githubapitest.core.model.Query
 import com.damgonzalez.githubapitest.core.remote.GitHubApi
 import com.damgonzalez.githubapitest.ui.adapter.UserAdapter
 import com.damgonzalez.githubapitest.util.Constants
+import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_list.*
+import java.util.*
 
 
 class ListActivity : AppCompatActivity() {
@@ -55,12 +59,27 @@ class ListActivity : AppCompatActivity() {
                 rvList.layoutManager = LinearLayoutManager(this@ListActivity)
                 rvList.setHasFixedSize(true)
                 data = result.data?.watchers?.edges?.users!!
+                insertOnLocalDB()
                 val adapter = UserAdapter(data!!, itemClickListener = itemOnClick)
                 rvList.adapter = adapter
             }, { e ->
                 progressBar.visibility = View.INVISIBLE
                 e.printStackTrace()
             })
+    }
+
+    fun insertOnLocalDB() {
+        Observable.fromCallable({
+            val db = LocalDB.getInstance(context = this)
+            val userDataDao = db?.userDataDao()
+            with(userDataDao){
+                data!!.forEach {
+                    this?.insert(it.user!!)
+                }
+            }
+        }).subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe()
     }
 
 }

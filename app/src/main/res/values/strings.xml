@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">Github Api Test</string>
-    <string name="api_token">8b645423f98f46998e6b397ad5ac9adb0dd34ee9</string>
-
+    <string name="app_name">GitHub Api Test</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="lorem_ipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="detail_mail">Email</string>
+    <string name="detail_name">Name</string>
+    <string name="detail_location">Location</string>
+    <string name="detail_bio">Bio</string>
+    <string name="detail_prof">GitHub Profile</string>
+    <string name="detail_web">Personal website</string>
+    <string name="send_mail">Send Email using:</string>
 </resources>
