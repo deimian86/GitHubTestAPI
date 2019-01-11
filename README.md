@@ -1,5 +1,4 @@
 # GitHub Test API
-=======
 Kotlin playground using GitHub GraphQL API
 
 ![VerdurasDeTemporada screenshot1](https://raw.githubusercontent.com/deimian86/VerdurasDeTemporada/master/screenshot1.png)
