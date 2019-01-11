@@ -9,4 +9,6 @@
     <string name="detail_prof">GitHub Profile</string>
     <string name="detail_web">Personal website</string>
     <string name="send_mail">Send Email using:</string>
+    <string name="send_mail_error">Theres no email address for this user</string>
+    <string name="transition_profile_pic" translatable="false">transition_profile_pic</string>
 </resources>

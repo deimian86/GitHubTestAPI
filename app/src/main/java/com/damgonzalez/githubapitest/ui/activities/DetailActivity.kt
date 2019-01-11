@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.util.Log
 import com.damgonzalez.githubapitest.R
 import com.damgonzalez.githubapitest.core.db.LocalDB
@@ -17,6 +18,8 @@ import com.damgonzalez.githubapitest.core.model.User
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_detail_content.*
+import android.app.ActivityOptions
+
 
 
 class DetailActivity : AppCompatActivity() {
@@ -38,6 +41,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
         val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
+
         fetchUserDataFromDb()
     }
 
@@ -64,16 +68,27 @@ class DetailActivity : AppCompatActivity() {
 
         // User Name
         tvNumber0.text = user.name
+        if(user.name.isNullOrEmpty()) lytName.visibility = View.GONE
 
         // User Mail
         tvNumber1.text = user.email
+        if(user.email.isNullOrEmpty()) lytMail.visibility = View.GONE
 
         fab.setOnClickListener {
-            sendMail(user.email)
+            if(!user.email.isNullOrEmpty()) {
+                sendMail(user.email)
+            } else {
+                Snackbar.make(
+                    coordinator, // Parent view
+                    getString(R.string.send_mail_error), // Message to show
+                    Snackbar.LENGTH_SHORT // How long to display the message.
+                ).show()
+            }
         }
 
         // User Location
         tvNumber2.text = user.location
+        if(user.location.isNullOrEmpty()) lytLocation.visibility = View.GONE
 
         val map = "http://maps.google.com/maps?q=" + user.location
         tvNumber2.setOnClickListener {
@@ -83,10 +98,12 @@ class DetailActivity : AppCompatActivity() {
 
         // User Bio
         tvNumber3.text = user.bio
+        if(user.bio.isNullOrEmpty()) lytBio.visibility = View.GONE
 
         // User Links
         tvNumber4.text = user.url
         tvNumber5.text = user.websiteUrl
+        if(user.websiteUrl.isNullOrEmpty()) lytPersonalSite.visibility = View.GONE
 
     }
 

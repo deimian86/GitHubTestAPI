@@ -27,6 +27,8 @@ class UserAdapter(var data : ArrayList<Node>, private val itemClickListener: (In
         return data.size
     }
 
+
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val userName = view.findViewById(R.id.txtName) as TextView
@@ -38,8 +40,7 @@ class UserAdapter(var data : ArrayList<Node>, private val itemClickListener: (In
     fun bind(holder:ViewHolder, user:User, itemClickListener:(Int)->Unit) {
 
         // User name
-        holder.userName.text = user.name
-        if(user.name.isNullOrBlank()) holder.userName.text = user.login
+        holder.userName.text = user.login
 
         // User bio
         holder.userBio.text = user.bio

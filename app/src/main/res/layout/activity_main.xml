@@ -5,6 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
+        android:background="@color/colorPrimary"
         tools:context="com.damgonzalez.githubapitest.ui.activities.MainActivity">
 
     <RelativeLayout
@@ -18,23 +19,22 @@
                 android:layout_margin="25dp"
                 android:orientation="vertical">
 
-            <Button
-                    android:id="@+id/btnConsulta1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="REPO_INFO" />
-
-            <Button
-                    android:id="@+id/btnConsulta2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="REPO_WATCHERS" />
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/imgLogo"
+                       android:src="@drawable/logo"/>
 
             <TextView
-                    android:id="@+id/txtResponse"
-                    android:layout_width="match_parent"
+                    android:id="@+id/txtDescription"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"/>
+                    android:text="@string/lorem_ipsum"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:lines="3"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible"/>
 
         </LinearLayout>
 

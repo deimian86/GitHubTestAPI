@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.damgonzalez.githubapitest.R
 import android.content.Intent
+import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
+import android.support.v7.widget.Toolbar
 import android.view.View
+import android.widget.ImageView
 import com.damgonzalez.githubapitest.core.db.LocalDB
 import com.damgonzalez.githubapitest.core.model.Node
 import com.damgonzalez.githubapitest.core.model.Query
@@ -20,7 +22,7 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_list.*
 import java.util.*
-
+import android.support.v4.util.Pair
 
 class ListActivity : AppCompatActivity() {
 
@@ -38,14 +40,21 @@ class ListActivity : AppCompatActivity() {
     }
 
     val itemOnClick: (Int) -> Unit = { position ->
-        rvList.adapter!!.notifyDataSetChanged()
         val intent = DetailActivity.newIntent(this, data?.get(position)?.user?.id!!)
-        startActivity(intent)
+
+        val sharedView1 = rvList.findViewHolderForAdapterPosition(position)!!.itemView.findViewById<ImageView>(R.id.imgUser)
+        val transitionName1 = this.getString(R.string.transition_profile_pic)
+        val profPicAnim = Pair.create<View, String>(sharedView1, transitionName1)
+
+        val transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(this, profPicAnim)
+        startActivity(intent, transitionActivityOptions.toBundle())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
+        val myToolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(myToolbar)
         rvList.layoutManager = LinearLayoutManager(this)
         progressBar.visibility = View.VISIBLE
         val queryBody = Query()

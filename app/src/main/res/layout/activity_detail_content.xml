@@ -18,213 +18,241 @@
 
         <!-- NAME -->
 
-        <RelativeLayout
+        <LinearLayout
+                android:id="@+id/lytName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="@dimen/activity_horizontal_margin">
+                android:orientation="vertical">
 
-            <ImageView
-                    android:id="@+id/ivContactItem0"
-                    android:layout_width="wrap_content"
+            <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/ic_person" />
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/activity_horizontal_margin">
 
-            <TextView
-                    android:id="@+id/tvNumber0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_toEndOf="@id/ivContactItem0"
-                    android:text="@string/lorem_ipsum"
-                    android:lines="1"
-                    android:ellipsize="end"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/black" />
+                <ImageView
+                        android:id="@+id/ivContactItem0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/ic_person" />
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvNumber0"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@id/ivContactItem0"
-                    android:text="@string/detail_name"
-                    android:lines="1"
-                    android:ellipsize="end"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                <TextView
+                        android:id="@+id/tvNumber0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_toEndOf="@id/ivContactItem0"
+                        android:text="@string/lorem_ipsum"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
-        </RelativeLayout>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvNumber0"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/ivContactItem0"
+                        android:text="@string/detail_name"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-        <View xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_marginBottom="8dp"
-              android:layout_marginStart="64dp"
-              android:layout_marginTop="8dp"
-              android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginStart="64dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
 
         <!-- MAIL -->
 
-        <RelativeLayout
+        <LinearLayout
+                android:id="@+id/lytMail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="@dimen/activity_horizontal_margin">
+                android:orientation="vertical">
 
-            <ImageView
-                    android:id="@+id/ivContactItem1"
-                    android:layout_width="wrap_content"
+            <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/ic_mail" />
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/activity_horizontal_margin">
 
-            <TextView
-                    android:id="@+id/tvNumber1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_toEndOf="@id/ivContactItem1"
-                    android:text="@string/lorem_ipsum"
-                    android:lines="1"
-                    android:ellipsize="end"
-                    android:autoLink="email"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/black" />
+                <ImageView
+                        android:id="@+id/ivContactItem1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/ic_mail" />
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvNumber1"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@id/ivContactItem1"
-                    android:text="@string/detail_mail"
-                    android:lines="1"
-                    android:ellipsize="end"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                <TextView
+                        android:id="@+id/tvNumber1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_toEndOf="@id/ivContactItem1"
+                        android:text="@string/lorem_ipsum"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:autoLink="email"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
-        </RelativeLayout>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvNumber1"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/ivContactItem1"
+                        android:text="@string/detail_mail"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-        <View xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_marginBottom="8dp"
-              android:layout_marginStart="64dp"
-              android:layout_marginTop="8dp"
-              android:background="@android:color/darker_gray" />
+            </RelativeLayout>
 
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginStart="64dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@android:color/darker_gray" />
 
-        <!-- NAME -->
+        </LinearLayout>
 
-        <RelativeLayout
+        <!-- LOCATION -->
+
+        <LinearLayout
+                android:id="@+id/lytLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="@dimen/activity_horizontal_margin">
+                android:orientation="vertical">
 
-            <ImageView
-                    android:id="@+id/ivContactItem2"
-                    android:layout_width="wrap_content"
+            <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/ic_location" />
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/activity_horizontal_margin">
 
-            <TextView
-                    android:id="@+id/tvNumber2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_toEndOf="@id/ivContactItem2"
-                    android:text="@string/lorem_ipsum"
-                    android:lines="1"
-                    android:ellipsize="end"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/black" />
+                <ImageView
+                        android:id="@+id/ivContactItem2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/ic_location" />
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvNumber2"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@id/ivContactItem2"
-                    android:text="@string/detail_location"
-                    android:lines="1"
-                    android:ellipsize="end"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                <TextView
+                        android:id="@+id/tvNumber2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_toEndOf="@id/ivContactItem2"
+                        android:text="@string/lorem_ipsum"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
-        </RelativeLayout>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvNumber2"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/ivContactItem2"
+                        android:text="@string/detail_location"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-        <View xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_marginBottom="8dp"
-              android:layout_marginStart="64dp"
-              android:layout_marginTop="8dp"
-              android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginStart="64dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@android:color/darker_gray" />
+        </LinearLayout>
 
         <!-- BIO -->
 
-        <RelativeLayout
+        <LinearLayout
+                android:id="@+id/lytBio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="@dimen/activity_horizontal_margin">
-
-            <ImageView
-                    android:id="@+id/ivContactItem3"
-                    android:layout_width="wrap_content"
+                android:orientation="vertical">
+            <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                    android:src="@drawable/ic_quote" />
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/activity_horizontal_margin">
 
-            <TextView
-                    android:id="@+id/tvNumber3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_toEndOf="@id/ivContactItem3"
-                    android:text="@string/lorem_ipsum"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/black" />
+                <ImageView
+                        android:id="@+id/ivContactItem3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/ic_quote" />
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvNumber3"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@id/ivContactItem3"
-                    android:text="@string/detail_bio"
-                    android:lines="1"
-                    android:ellipsize="end"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                <TextView
+                        android:id="@+id/tvNumber3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_toEndOf="@id/ivContactItem3"
+                        android:text="@string/lorem_ipsum"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
-        </RelativeLayout>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvNumber3"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/ivContactItem3"
+                        android:text="@string/detail_bio"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-        <View xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_marginBottom="8dp"
-              android:layout_marginStart="64dp"
-              android:layout_marginTop="8dp"
-              android:background="@android:color/darker_gray" />
+            </RelativeLayout>
 
-        <!-- BIO -->
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginStart="64dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <!-- WEBS -->
 
         <RelativeLayout
                 android:layout_width="match_parent"
@@ -270,6 +298,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+                android:id="@+id/lytPersonalSite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
