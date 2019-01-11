@@ -1,8 +1,9 @@
 # GitHub Test API
 Kotlin playground using GitHub GraphQL API
 
-![VerdurasDeTemporada screenshot1](https://raw.githubusercontent.com/deimian86/VerdurasDeTemporada/master/screenshot1.png)
-![VerdurasDeTemporada screenshot2](https://raw.githubusercontent.com/deimian86/VerdurasDeTemporada/master/screenshot2.png)
+![GitHubTestAPI screenshot1](https://raw.githubusercontent.com/deimian86/GitHubTestAPI/master/screenshot_1.png)
+![GitHubTestAPI screenshot2](https://raw.githubusercontent.com/deimian86/GitHubTestAPI/master/screenshot_2.png)
+![GitHubTestAPI screenshot2](https://raw.githubusercontent.com/deimian86/GitHubTestAPI/master/screenshot_3.png)
 
 Download
 --------
