@@ -1,8 +1,7 @@
 # GitHub Test API
 Kotlin playground using GitHub GraphQL API
 
-![GitHubTestAPI screenshot1](https://raw.githubusercontent.com/deimian86/GitHubTestAPI/master/screenshot_1.png)
-![GitHubTestAPI screenshot2](https://raw.githubusercontent.com/deimian86/GitHubTestAPI/master/screenshot_2.png)
+![GitHubTestAPI screenshot1](https://raw.githubusercontent.com/deimian86/GitHubTestAPI/master/screenshot_2.png)
 ![GitHubTestAPI screenshot2](https://raw.githubusercontent.com/deimian86/GitHubTestAPI/master/screenshot_3.png)
 
 Download
